@@ -22,7 +22,7 @@ public class Loans extends BaseEntity {
 
     private String loanType;
 
-    private String totalLoan;
+    private int totalLoan;
 
     private int amountPaid;
 
