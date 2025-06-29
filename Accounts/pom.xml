@@ -11,8 +11,9 @@
     <groupId>com.eomaxl</groupId>
     <artifactId>Accounts</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>Accounts</name>
-    <description>Accounts</description>
+    <description>Mircoservice for Accounts</description>
     <url/>
     <licenses>
         <license/>
