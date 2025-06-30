@@ -1,0 +1,37 @@
+services:
+  accounts:
+    image: "eomaxl/accounts:s4"
+    container_name: accounts-ms
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - abcBank
+  loans:
+    image: "eomaxl/loans:s4"
+    container_name: loans-ms
+    ports:
+      - "8090:8090"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - abcBank
+  cards:
+    image: "eomaxl/cards:s4"
+    container_name: cards-ms
+    ports:
+      - "9090:9090"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - abcBank
+networks:
+  abcBank:
+    driver: "bridge"

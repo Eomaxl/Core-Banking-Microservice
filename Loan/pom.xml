@@ -9,9 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.eomaxl</groupId>
-    <artifactId>Loan</artifactId>
+    <artifactId>loans</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Loan</name>
+    <packaging>jar</packaging>
+    <name>loans</name>
     <description>Loan</description>
     <url/>
     <licenses>
@@ -27,7 +28,7 @@
         <url/>
     </scm>
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -93,12 +94,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
+                    <image>
+                        <name>eomaxl/${project.artifactId}:s4</name>
+                    </image>
                 </configuration>
             </plugin>
         </plugins>
